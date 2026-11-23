@@ -1,12 +1,17 @@
 #define _POSIX_C_SOURCE 200809L
-
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "config.h"
+#include "enderecos.h"
 #include "erros.h"
+#include "fila_reposicao.h"
+#include "memoria.h"
 
-static void mostrar_uso(void){
+
+static void mostrar_uso(void)
+{
     fputs("uso: ./vm <arquivo_de_enderecos> <fifo|lru> <fifo|lru>\n"
           "  1o argumento: arquivo com um endereco logico (0 a 65535) por linha\n"
           "  2o argumento: algoritmo de substituicao de pagina (fifo ou lru)\n"
@@ -14,8 +19,6 @@ static void mostrar_uso(void){
           "exemplo: ./vm address.txt lru fifo\n",
           stderr);
 }
-
-typedef enum { POLITICA_FIFO, POLITICA_LRU } Politica;
 
 static int interpretar_politica(const char *texto, Politica *politica)
 {
@@ -34,7 +37,13 @@ int main(int argc, char *argv[])
 {
     Politica politica_pagina;
     Politica politica_tlb;
+    ListaEnderecos enderecos = { NULL, 0, 0 };
+    FILE *saida = NULL;
+    unsigned long faltas = 0;
+    size_t i;
+    int status = EXIT_FAILURE;
 
+    /* 1) validacao dos argumentos */
     if (argc != 4) {
         erro("numero de argumentos invalido: esperados 3, recebidos %d",
              argc > 0 ? argc - 1 : 0);
@@ -54,5 +63,58 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-    return EXIT_SUCCESS;
+    if (!carregar_enderecos(argv[1], &enderecos))
+        goto liberar;
+
+    if (!memoria_iniciar(politica_pagina))
+        goto liberar;
+
+    saida = fopen(ARQUIVO_SAIDA, "w");
+    if (saida == NULL) {
+        erro("nao foi possivel criar '%s': %s", ARQUIVO_SAIDA, strerror(errno));
+        goto liberar;
+    }
+
+    for (i = 0; i < enderecos.quantidade; i++) {
+        const unsigned int logico = enderecos.itens[i];
+        const int pagina = (int)(logico >> BITS_DESLOCAMENTO);
+        const int deslocamento = (int)(logico & (TAM_PAGINA - 1));
+        int quadro = memoria_consultar(pagina);
+        int fisico;
+
+        if (quadro < 0) {                      
+            faltas++;
+            quadro = memoria_carregar(pagina);
+            if (quadro < 0) {
+                erro("falha ao ler a pagina %d de '%s'",
+                     pagina, ARQUIVO_RESERVA);
+                goto descartar_saida;
+            }
+        }
+
+        fisico = quadro * TAM_PAGINA + deslocamento;
+        fprintf(saida, "Virtual address: %u Physical address: %d Value: %d\n",
+                logico, fisico, memoria_ler(fisico));
+    }
+
+    fprintf(saida, "Number of Translated Addresses = %lu\n",
+            (unsigned long)enderecos.quantidade);
+    fprintf(saida, "Page Faults = %lu\n", faltas);
+    fprintf(saida, "Page Fault Rate = %.3f\n",
+            (double)faltas / (double)enderecos.quantidade);
+
+    fclose(saida);
+    saida = NULL;
+    status = EXIT_SUCCESS;
+    goto liberar;
+
+descartar_saida:
+    fclose(saida);
+    saida = NULL;
+    remove(ARQUIVO_SAIDA);
+
+liberar:
+    memoria_encerrar();
+    liberar_enderecos(&enderecos);
+    return status;
 }

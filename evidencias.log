@@ -1,0 +1,487 @@
+Script iniciado em 2026-11-23 10:54:06-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="94" LINES="20"]
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mmkdir memoria-virtual testes[27mmkdir memoria-virtual testes
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcd memoria-virtual[27mcd memoria-virtual
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn/memoria-virtual[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn/memoria-virtual[00m$ [7mgit init[27mgit init
+[?2004l[33mhint: Using 'master' as the name for the initial branch. This default branch name[m
+[33mhint: is subject to change. To configure the initial branch name to use in all[m
+[33mhint: of your new repositories, which will suppress this warning, call:[m
+[33mhint: [m
+[33mhint: 	git config --global init.defaultBranch <name>[m
+[33mhint: [m
+[33mhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and[m
+[33mhint: 'development'. The just-created branch can be renamed via this command:[m
+[33mhint: [m
+[33mhint: 	git branch -m <name>[m
+Repositório vazio Git inicializado em  /home/yan/Área de trabalho/yrn/memoria-virtual/.git/
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn/memoria-virtual[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn/memoria-virtual[00m$ [7mecho "abc" > ../testes/letras.txt[27mecho "abc" > ../testes/letras.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn/memoria-virtual[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn/memoria-virtual[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn/memoria-virtual[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn/memoria-virtual[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn/memoria-virtual[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn/memoria-virtual[00m$ [7mecho "-5" > ../testes/negativo.txt[27mecho "-5" > ../testes/negativo.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn/memoria-virtual[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn/memoria-virtual[00m$ [7mecho "70000" > ../testes/grande.txt[27m [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "70000" > ../testes/grande.txt [A
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn/memoria-virtual[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn/memoria-virtual[00m$ [7mtouch ../testes/vazio.txt[27mtouch ../testes/vazio.txt
+[?2004l[?2004h]0;yanScript iniciado em 2026-11-23 11:01:16-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="94" LINES="19"]
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/erros.o obj/main.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt fifo fifo[27m./vm teste.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mecho $?[27mecho $?
+[?2004l0
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt lru fifo[27m./vm teste.txt lru fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mecho $?[27mecho $?
+[?2004l0
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt abc fifo[27m./vm teste.txt abc fifo
+[?2004lvm: erro: algoritmo de substituicao de pagina invalido: 'abc' (use fifo ou lru)
+uso: ./vm <arquivo_de_enderecos> <fifo|lru> <fifo|lru>
+  1o argumento: arquivo com um endereco logico (0 a 65535) por linha
+  2o argumento: algoritmo de substituicao de pagina (fifo ou lru)
+  3o argumento: algoritmo de substituicao da TLB    (fifo ou lru)
+exemplo: ./vm address.txt lru fifo
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt fifo abc[27m./vm teste.txt fifo abc
+[?2004lvm: erro: algoritmo de substituicao da TLB invalido: 'abc' (use fifo ou lru)
+uso: ./vm <arquivo_de_enderecos> <fifo|lru> <fifo|lru>
+  1o argumento: arquivo com um endereco logico (0 a 65535) por linha
+  2o argumento: algoritmo de substituicao de pagina (fifo ou lru)
+  3o argumento: algoritmo de substituicao da TLB    (fifo ou lru)
+exemplo: ./vm address.txt lru fifo
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm[27m./vm
+[?2004lvm: erro: numero de argumentos invalido: esperados 3, recebidos 0
+uso: ./vm <arquivo_de_enderecos> <fifo|lru> <fifo|lru>
+  1o argumento: arquivo com um endereco logico (0 a 65535) por linha
+  2o argumento: algoritmo de substituicao de pagina (fifo ou lru)
+  3o argumento: algoritmo de substituicao da TLB    (fifo ou lru)
+exemplo: ./vm address.txt lru fifo
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt fifo fifo extra[27m./vm teste.txt fifo fifo extra
+[?2004lvm: erro: numero de argumentos invalido: esperados 3, recebidos 4
+uso: ./vm <arquivo_de_enderecos> <fifo|lru> <fifo|lru>
+  1o argumento: arquivo com um endereco logico (0 a 65535) por linha
+  2o argumento: algoritmo de substituicao de pagina (fifo ou lru)
+  3o argumento: algoritmo de substituicao da TLB    (fifo ou lru)
+exemplo: ./vm address.txt lru fifo
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mmake clean[27mmake clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ script a-[K[K-a evidencias.log
+[?2004lScript iniciado, arquivo de registro de saída é "evidencias.log".
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mecho $?[27mecho $?
+[?2004l127
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/main.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lvm: erro: nao foi possivel abrir o arquivo de enderecos '/tmp/vm_validos.txt': No such file or directory
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -IincludScript iniciado em 2026-11-23 11:09:52-03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="94" LINES="19"]
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mecho $?[27mecho $?
+[?2004l127
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/main.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lvm: erro: nao foi possivel abrir o arquivo de enderecos '/tmp/vm_validos.txt': No such file or directory
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/main.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean./vm /tmp/vm_validos.txt fifo fifo[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lvm: erro: nao foi possivel abrir o arquivo de enderecos '/tmp/vm_validos.txt': No such file or directory
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ x'[K[K[7mprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.txt[27m [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.tx
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmake clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.txt[27m [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.txt [A
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -l /tmp/vm_validos.txt[27mls -l /tmp/vm_validos.txt
+[?2004l-rw-rw-r-- 1 yan yan 16 nov 23 11:16 /tmp/vm_validos.txt
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat /tmp/vm_validos.txt[27mcat /tmp/vm_validos.txt
+[?2004l0
+255
+256
+65535
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ ./vm
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt abc fifo[27m./vm teste.txt abc fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32mye -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/main.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean./vm /tmp/vm_validos.txt fifo fifo[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lvm: erro: nao foi possivel abrir o arquivo de enderecos '/tmp/vm_validos.txt': No such file or directory
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ x'[K[K[7mprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.txt[27m [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.tx
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmake clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.txt[27m [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.txt [A
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -l /tmp/vm_validos.txt[27mls -l /tmp/vm_validos.txt
+[?2004l-rw-rw-r-- 1 yan yan 16 nov 23 11:16 /tmp/vm_validos.txt
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat /tmp/vm_validos.txt[27mcat /tmp/vm_validos.txt
+[?2004l0
+255
+256
+65535
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ ./vm
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt abc fifo[27m./vm teste.txt abc fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Áan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt fifo abc[27m./vm teste.txt fifo abc
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm[27m./vm
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt fifo fifo extra[27m./vm teste.txt fifo fifo extra
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mmake clean[27mmake clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.txt[27m [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.txt [A
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mecho $?[27mecho $?
+[?2004l127
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '  123  \n\t456\t\n65535\n\n' > /tmp/vm_espa[27m[7mc[27m[7mos.txt[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ printf '  123  \n\t456\t\n65535\n\n' > /tmp/vm_espacos.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_espacos.txt fifo fifo[27m./vm /tmp/vm_espacos.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '65536\n' > /tmp/vm_fora.txt[27mprintf '65536\n' > /tmp/vm_fora.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_fora.txt fifo fifo[27m./vm /tmp/vm_fora.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf 'abc\n' > /tmp/vm_letras.txt[27m
+[7m./vm /tmp/vm_letras.txt fifo fifo[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ printf 'abc\n' > /tmp/vm_letras.txt
+./vm /tmp/vm_letras.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '%s\n' '-1' > /tmp/vm_negativo.txt[27m
+[7m./vm /tmp/vm_negativo.txt fifo fifo[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ printf '%s\n' '-1' > /tmp/vm_negativo.txt
+./vm /tmp/vm_negativo.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '123 456\n' > /tmp/vm_dois.txt[27rea de trabalho/yrn[00m$ [7m./vm teste.txt fifo abc[27m./vm teste.txt fifo abc
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm[27m./vm
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt fifo fifo extra[27m./vm teste.txt fifo fifo extra
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mmake clean[27mmake clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.txt[27m [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf '0\n255\n256\n65535\n' > /tmp/vm_validos.txt [A
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mecho $?[27mecho $?
+[?2004l127
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '  123  \n\t456\t\n65535\n\n' > /tmp/vm_espa[27m[7mc[27m[7mos.txt[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ printf '  123  \n\t456\t\n65535\n\n' > /tmp/vm_espacos.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_espacos.txt fifo fifo[27m./vm /tmp/vm_espacos.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '65536\n' > /tmp/vm_fora.txt[27mprintf '65536\n' > /tmp/vm_fora.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_fora.txt fifo fifo[27m./vm /tmp/vm_fora.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf 'abc\n' > /tmp/vm_letras.txt[27m
+[7m./vm /tmp/vm_letras.txt fifo fifo[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ printf 'abc\n' > /tmp/vm_letras.txt
+./vm /tmp/vm_letras.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '%s\n' '-1' > /tmp/vm_negativo.txt[27m
+[7m./vm /tmp/vm_negativo.txt fifo fifo[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ printf '%s\n' '-1' > /tmp/vm_negativo.txt
+./vm /tmp/vm_negativo.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '123 456\n' > /tmp/vm_dois.txt[27m
+[7m./vm /tmp/vm_dois.txt fifo m
+[7m./vm /tmp/vm_dois.txt fifo fifo[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ printf '123 456\n' > /tmp/vm_dois.txt
+./vm /tmp/vm_dois.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '123\n\n456\n' > /tmp/vm_vazio.txt[27m
+[7m./vm /tmp/vm_vazio.txt fifo fifo[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ printf '123\n\n456\n' > /tmp/vm_vazio.txt
+./vm /tmp/vm_vazio.txt fifo fifo^[[C[K[K[K
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mtouch /tmp/vm_arquivo_vazio.txt[27m
+[7m./vm /tmp/vm_arquivo_vazio.txt fifo fifo[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ touch /tmp/vm_arquivo_vazio.txt
+./vm /tmp/vm_arquivo_vazio.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/arquivo_que_nao_existe.txt fifo fifo[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./vm /tmp/arquivo_que_nao_existe.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/main.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -l vm[27mls -l vm
+[?2004l-rwxrwxr-x 1 yan yan 16944 nov 23 11:21 [0m[01;32mvm[0m
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt abc fifo[27m./vm teste.txt abc fifo
+[?2004lvm: erro: algoritmo de substituicao de pagina invalido: 'abc' (use fifo ou lru)
+uso: ./vm <arquivo_de_enderecos> <fifo|lru> <fifo|lru>
+  1o argumento: arquivo com um endereco logico (0 a 65535) por linha
+  2o argumento: algoritmo de substituicao de pagina (fifo ou lru)
+  3o argumento: algoritmo de substituicao da TLB    (fifo ou lru)
+exemplo: ./vm address.txt lru fifo
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt fifo abc[27mfifo[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ printf '123 456\n' > /tmp/vm_dois.txt
+./vm /tmp/vm_dois.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '123\n\n456\n' > /tmp/vm_vazio.txt[27m
+[7m./vm /tmp/vm_vazio.txt fifo fifo[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ printf '123\n\n456\n' > /tmp/vm_vazio.txt
+./vm /tmp/vm_vazio.txt fifo fifo^[[C[K[K[K
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mtouch /tmp/vm_arquivo_vazio.txt[27m
+[7m./vm /tmp/vm_arquivo_vazio.txt fifo fifo[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ touch /tmp/vm_arquivo_vazio.txt
+./vm /tmp/vm_arquivo_vazio.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/arquivo_que_nao_existe.txt fifo fifo[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./vm /tmp/arquivo_que_nao_existe.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/main.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -l vm[27mls -l vm
+[?2004l-rwxrwxr-x 1 yan yan 16944 nov 23 11:21 [0m[01;32mvm[0m
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt abc fifo[27m./vm teste.txt abc fifo
+[?2004lvm: erro: algoritmo de substituicao de pagina invalido: 'abc' (use fifo ou lru)
+uso: ./vm <arquivo_de_enderecos> <fifo|lru> <fifo|lru>
+  1o argumento: arquivo com um endereco logico (0 a 65535) por linha
+  2o argumento: algoritmo de substituicao de pagina (fifo ou lru)
+  3o argumento: algoritmo de substituicao da TLB    (fifo ou lru)
+exemplo: ./vm address.txt lru fifo
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm teste.txt fifo abc[27m./vm teste.txt fif./vm teste.txt fifo abc
+[?2004lvm: erro: algoritmo de substituicao da TLB invalido: 'abc' (use fifo ou lru)
+uso: ./vm <arquivo_de_enderecos> <fifo|lru> <fifo|lru>
+  1o argumento: arquivo com um endereco logico (0 a 65535) por linha
+  2o argumento: algoritmo de substituicao de pagina (fifo ou lru)
+  3o argumento: algoritmo de substituicao da TLB    (fifo ou lru)
+exemplo: ./vm address.txt lru fifo
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean][K[C[C[C[C[C[C[C[C[C[C
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_basico.txt fifo fifo[27m./vm /tmp/vm_basico.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/fila_reposicao.c -o obj/fila_reposicao.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/memoria.c -o obj/memoria.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/fila_reposicao.o obj/main.o obj/memoria.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_basico.txt fifo fifo[27m./vm /tmp/vm_basico.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat correct.txt[27mcat correct.txt
+[?2004lcat: correct.txt: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+co abc
+[?2004lvm: erro: algoritmo de substituicao da TLB invalido: 'abc' (use fifo ou lru)
+uso: ./vm <arquivo_de_enderecos> <fifo|lru> <fifo|lru>
+  1o argumento: arquivo com um endereco logico (0 a 65535) por linha
+  2o argumento: algoritmo de substituicao de pagina (fifo ou lru)
+  3o argumento: algoritmo de substituicao da TLB    (fifo ou lru)
+exemplo: ./vm address.txt lru fifo
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean][K[C[C[C[C[C[C[C[C[C[C
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_basico.txt fifo fifo[27m./vm /tmp/vm_basico.txt fifo fifo
+[?2004lbash: ./vm: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/fila_reposicao.c -o obj/fila_reposicao.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/memoria.c -o obj/memoria.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/fila_reposicao.o obj/main.o obj/memoria.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_basico.txt fifo fifo[27m./vm /tmp/vm_basico.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat correct.txt[27mcat correct.txt
+[?2004lcat: correct.txt: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedanc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/fila_reposicao.c -o obj/fila_reposicao.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/memoria.c -o obj/memoria.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/fila_reposicao.o obj/main.o obj/memoria.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_basico.txt fifo fifo[27m./vm /tmp/vm_basico.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat correct.txt[27mcat correct.txt
+[?2004lcat: correct.txt: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/fila_reposicao.c -o obj/fila_reposicao.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/memoria.c -o obj/memoria.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/fila_reposicao.o obj/main.o obj/memoria.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh BACKING_STORE.bin[27mls -lh BACKING_STORE.bin
+[?2004l-rw-r--r-- 1 yan yan 64K nov 23 11:33 BACKING_STORE.bin
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mfind .. -name BACKING_STORE.bin[27mfind .. -name BACKING_STORE.bin
+[?2004l../etapas/etapa_3/BACKING_STORE.bin
+../etapas/etapa_7/BACKING_STORE.bin
+../etapas/etapa_5/BACKING_STORE.bin
+../etapas/etapa_6/BACKING_STORE.bin
+../etapas/etapa_4/BACKING_STORE.bin
+../memoria_virtual/BACKING_STORE.bin
+../yrn/BACKING_STORE.bin
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh correct.txt[27mls -lh correct.txt
+[?2004lls: não foi possível acessar 'correct.txt': Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Áretic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/fila_reposicao.c -o obj/fila_reposicao.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/memoria.c -o obj/memoria.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/fila_reposicao.o obj/main.o obj/memoria.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf '0\n1\n255\n256\n0\n' > /tmp/vm_basico.txt
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_basico.txt fifo fifo[27m./vm /tmp/vm_basico.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat correct.txt[27mcat correct.txt
+[?2004lcat: correct.txt: Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/fila_reposicao.c -o obj/fila_reposicao.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/memoria.c -o obj/memoria.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/fila_reposicao.o obj/main.o obj/memoria.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh BACKING_STORE.bin[27mls -lh BACKING_STORE.bin
+[?2004l-rw-r--r-- 1 yan yan 64K nov 23 11:33 BACKING_STORE.bin
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mfind .. -name BACKING_STORE.bin[27mfind .. -name BACKING_STORE.bin
+[?2004l../etapas/etapa_3/BACKING_STORE.bin
+../etapas/etapa_7/BACKING_STORE.bin
+../etapas/etapa_5/BACKING_STORE.bin
+../etapas/etapa_6/BACKING_STORE.bin
+../etapas/etapa_4/BACKING_STORE.bin
+../memoria_virtual/BACKING_STORE.bin
+../yrn/BACKING_STORE.bin
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh correct.txt[27mls -lh correct.txt
+[?2004lls: não foi possível acessar 'correct.txt': Arquivo ou diretório inexistente
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yaa de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh BACKING_STORE.bin[27mls -lh BACKING_STORE.bin
+[?2004l-rw-r--r-- 1 yan yan 64K nov 23 11:33 BACKING_STORE.bin
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mfind .. -name BACKING_STORE.bin[27mfind .. -name BACKING_STORE.bin
+[?2004l../etapas/etapa_3/BACKING_STORE.bin
+../etapas/etapa_7/BACKING_STORE.bin
+../etapas/etapa_5/BACKING_STORE.bin
+../etapas/etapa_6/BACKING_STORE.bin
+../etapas/etapa_4/BACKING_STORE.bin
+../memoria_virtual/BACKING_STORE.bin
+../yrn/BACKING_STORE.bin
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mmake[27mmake
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/fila_reposicao.c -o obj/fila_reposicao.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/memoria.c -o obj/memoria.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/fila_reposicao.o obj/main.o obj/memoria.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh correct.txt[27mls -lh correct.txt
+[?2004l-rw-rw-r-- 1 yan yan 283 nov 23 11:43 correct.txt
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat correct.txt[27mcat correct.txt
+[?2004lVirtual address: 0 Physical address: 0 Value: 0
+Virtual address: 255 Physical address: 255 Value: 63
+Virtual address: 256 Physical address: 256 Value: 0
+Virtual address: 65535 Physical address: 767 Value: -1
+Number of Translated Addresses = 4
+Page Faults = 3
+Page Fault Rate = 0.750
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh BACKING_STORE.bin[27mls -lh BACKING_STORE.bin
+[?2004l-rw-r--r-- 1 yan yan 64K nov 23 11:33 BACKING_STORE.bin
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -l vm[27mls -l vm
+[?2004l-rwxrwxr-x 1 yan yan 17664 nov 23 11:43 [0m[01;32mvm[0m
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mecho $?[27mecho $?
+[?2004l0
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh correct.txt[27mls -lh correct.txt
+[?2004l-rw-rw-r-- 1 yan yan 283 nov 23 11:45 correct.txt
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat correct.txt[27mcat correct.txt
+[?2004lVirtual address: 0 Physical address: 0 Value: 0
+Virtual address: 255 Physical address: 255 Value: 63
+Virn@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh BACKING_STORE.bin[27mls -lh BACKING_STORE.bin
+[?2004l-rw-r--r-- 1 yan yan 64K nov 23 11:33 BACKING_STORE.bin
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mfind .. -name BACKING_STORE.bin[27mfind .. -name BACKING_STORE.bin
+[?2004l../etapas/etapa_3/BACKING_STORE.bin
+../etapas/etapa_7/BACKING_STORE.bin
+../etapas/etapa_5/BACKING_STORE.bin
+../etapas/etapa_6/BACKING_STORE.bin
+../etapas/etapa_4/BACKING_STORE.bin
+../memoria_virtual/BACKING_STORE.bin
+../yrn/BACKING_STORE.bin
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mmake[27mmake
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/fila_reposicao.c -o obj/fila_reposicao.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/memoria.c -o obj/memoria.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/fila_reposicao.o obj/main.o obj/memoria.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh correct.txt[27mls -lh correct.txt
+[?2004l-rw-rw-r-- 1 yan yan 283 nov 23 11:43 correct.txt
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat correct.txt[27mcat correct.txt
+[?2004lVirtual address: 0 Physical address: 0 Value: 0
+Virtual address: 255 Physical address: 255 Value: 63
+Virtual address: 256 Physical address: 256 Value: 0
+Virtual address: 65535 Physical address: 767 Value: -1
+Number of Translated Addresses = 4
+Page Faults = 3
+Page Fault Rate = 0.750
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh BACKING_STORE.bin[27mls -lh BACKING_STORE.bin
+[?2004l-rw-r--r-- 1 yan yan 64K nov 23 11:33 BACKING_STORE.bin
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -l vm[27mls -l vm
+[?2004l-rwxrwxr-x 1 yan yan 17664 nov 23 11:43 [0m[01;32mvm[0m
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm /tmp/vm_validos.txt fifo fifo[27m./vm /tmp/vm_validos.txt fifo fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mecho $?[27mecho $?
+[?2004l0
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mls -lh correct.txt[27mls -lh correct.txt
+[?2004l-rw-rw-r-- 1 yan yan 283 nov 23 11:45 correct.txt
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mcat correct.txt[27mcat correct.txt
+[?2004lVirtual address: 0 Physical address: 0 Value: 0
+Virtual address: 255 Physical address: 255 Value: 63
+Virtual address: 256 Physical address:
