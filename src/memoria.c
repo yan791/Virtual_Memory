@@ -1,9 +1,7 @@
 #define _POSIX_C_SOURCE 200809L
-
 #include <errno.h>
 #include <stdio.h>
 #include <string.h>
-
 #include "config.h"
 #include "erros.h"
 #include "memoria.h"
@@ -72,6 +70,11 @@ int memoria_carregar(int pagina)
     tabela_paginas[pagina] = quadro;
     pagina_no_quadro[quadro] = pagina;
     return quadro;
+}
+
+void memoria_registrar_acesso(int quadro)
+{
+    fila_registrar_uso(&fila_quadros, quadro);
 }
 
 int memoria_ler(int endereco_fisico)

@@ -36,6 +36,7 @@ static void descrever_caractere(int c, char *destino, size_t tamanho)
         snprintf(destino, tamanho, "de codigo %d", c);
 }
 
+
 int carregar_enderecos(const char *caminho, ListaEnderecos *lista)
 {
     enum { ANTES_DO_NUMERO, DENTRO_DO_NUMERO, DEPOIS_DO_NUMERO } estado;

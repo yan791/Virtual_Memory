@@ -60,3 +60,11 @@ int fila_reservar(FilaReposicao *fila)
     fila_encaixar_no_fim(fila, slot);
     return slot;
 }
+
+void fila_registrar_uso(FilaReposicao *fila, int slot)
+{
+    if (fila->politica == POLITICA_LRU && fila->cauda != slot) {
+        fila_desencaixar(fila, slot);
+        fila_encaixar_no_fim(fila, slot);
+    }
+}

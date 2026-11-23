@@ -9,7 +9,6 @@
 #include "fila_reposicao.h"
 #include "memoria.h"
 
-
 static void mostrar_uso(void)
 {
     fputs("uso: ./vm <arquivo_de_enderecos> <fifo|lru> <fifo|lru>\n"
@@ -43,7 +42,6 @@ int main(int argc, char *argv[])
     size_t i;
     int status = EXIT_FAILURE;
 
-    /* 1) validacao dos argumentos */
     if (argc != 4) {
         erro("numero de argumentos invalido: esperados 3, recebidos %d",
              argc > 0 ? argc - 1 : 0);
@@ -91,6 +89,7 @@ int main(int argc, char *argv[])
                 goto descartar_saida;
             }
         }
+        memoria_registrar_acesso(quadro);
 
         fisico = quadro * TAM_PAGINA + deslocamento;
         fprintf(saida, "Virtual address: %u Physical address: %d Value: %d\n",

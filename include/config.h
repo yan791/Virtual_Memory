@@ -1,7 +1,3 @@
-/*
- * config.h - parametros do sistema simulado
- */
-
 #ifndef VM_CONFIG_H
 #define VM_CONFIG_H
 

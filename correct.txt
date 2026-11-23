@@ -126,8 +126,10 @@ Virtual address: 31744 Physical address: 31744 Value: 0
 Virtual address: 32000 Physical address: 32000 Value: 0
 Virtual address: 32256 Physical address: 32256 Value: 0
 Virtual address: 32512 Physical address: 32512 Value: 0
-Virtual address: 32768 Physical address: 0 Value: 0
-Virtual address: 0 Physical address: 256 Value: 0
-Number of Translated Addresses = 130
+Virtual address: 0 Physical address: 0 Value: 0
+Virtual address: 32768 Physical address: 256 Value: 0
+Virtual address: 0 Physical address: 0 Value: 0
+Virtual address: 256 Physical address: 512 Value: 0
+Number of Translated Addresses = 132
 Page Faults = 130
-Page Fault Rate = 1.000
+Page Fault Rate = 0.985

@@ -7,7 +7,7 @@ typedef enum { POLITICA_FIFO, POLITICA_LRU } Politica;
 typedef struct {
     Politica politica;
     int capacidade;
-    int ocupados;              
+    int ocupados;               
     int cabeca;
     int cauda;
     int anterior[MAIOR_FILA];
@@ -16,5 +16,6 @@ typedef struct {
 
 void fila_iniciar(FilaReposicao *fila, int capacidade, Politica politica);
 int fila_reservar(FilaReposicao *fila);
+void fila_registrar_uso(FilaReposicao *fila, int slot);
 
 #endif
