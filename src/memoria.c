@@ -53,11 +53,12 @@ int memoria_consultar(int pagina)
     return tabela_paginas[pagina];
 }
 
-int memoria_carregar(int pagina)
+int memoria_carregar(int pagina, int *pagina_expulsa)
 {
     int quadro = fila_reservar(&fila_quadros);
     int antiga = pagina_no_quadro[quadro];
 
+    *pagina_expulsa = antiga;
     if (antiga >= 0)
         tabela_paginas[antiga] = -1;
 

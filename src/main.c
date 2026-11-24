@@ -8,6 +8,7 @@
 #include "erros.h"
 #include "fila_reposicao.h"
 #include "memoria.h"
+#include "tlb.h"
 
 static void mostrar_uso(void)
 {
@@ -39,6 +40,7 @@ int main(int argc, char *argv[])
     ListaEnderecos enderecos = { NULL, 0, 0 };
     FILE *saida = NULL;
     unsigned long faltas = 0;
+    unsigned long acertos_tlb = 0;
     size_t i;
     int status = EXIT_FAILURE;
 
@@ -73,27 +75,41 @@ int main(int argc, char *argv[])
         goto liberar;
     }
 
+    tlb_iniciar(politica_tlb);
+
     for (i = 0; i < enderecos.quantidade; i++) {
         const unsigned int logico = enderecos.itens[i];
         const int pagina = (int)(logico >> BITS_DESLOCAMENTO);
         const int deslocamento = (int)(logico & (TAM_PAGINA - 1));
-        int quadro = memoria_consultar(pagina);
+        int quadro = -1;
+        int entrada = tlb_buscar(pagina, &quadro);
         int fisico;
 
-        if (quadro < 0) {                      
-            faltas++;
-            quadro = memoria_carregar(pagina);
-            if (quadro < 0) {
-                erro("falha ao ler a pagina %d de '%s'",
-                     pagina, ARQUIVO_RESERVA);
-                goto descartar_saida;
+        if (entrada >= 0) {                     
+            acertos_tlb++;
+        } else {                               
+            quadro = memoria_consultar(pagina);
+            if (quadro < 0) {                  
+                int expulsa;
+
+                faltas++;
+                quadro = memoria_carregar(pagina, &expulsa);
+                if (expulsa >= 0)
+                    tlb_invalidar_pagina(expulsa);
+                if (quadro < 0) {
+                    erro("falha ao ler a pagina %d de '%s'",
+                         pagina, ARQUIVO_RESERVA);
+                    goto descartar_saida;
+                }
             }
+            entrada = tlb_inserir(pagina, quadro);
         }
         memoria_registrar_acesso(quadro);
 
         fisico = quadro * TAM_PAGINA + deslocamento;
-        fprintf(saida, "Virtual address: %u Physical address: %d Value: %d\n",
-                logico, fisico, memoria_ler(fisico));
+        fprintf(saida, "Virtual address: %u TLB: %d Physical address: %d "
+                       "Value: %d\n",
+                logico, entrada, fisico, memoria_ler(fisico));
     }
 
     fprintf(saida, "Number of Translated Addresses = %lu\n",
@@ -101,6 +117,9 @@ int main(int argc, char *argv[])
     fprintf(saida, "Page Faults = %lu\n", faltas);
     fprintf(saida, "Page Fault Rate = %.3f\n",
             (double)faltas / (double)enderecos.quantidade);
+    fprintf(saida, "TLB Hits = %lu\n", acertos_tlb);
+    fprintf(saida, "TLB Hit Rate = %.3f\n",
+            (double)acertos_tlb / (double)enderecos.quantidade);
 
     fclose(saida);
     saida = NULL;

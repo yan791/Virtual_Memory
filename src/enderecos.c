@@ -1,11 +1,9 @@
 #define _POSIX_C_SOURCE 200809L
-
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
-
 #include "config.h"
 #include "enderecos.h"
 #include "erros.h"
@@ -35,7 +33,6 @@ static void descrever_caractere(int c, char *destino, size_t tamanho)
     else
         snprintf(destino, tamanho, "de codigo %d", c);
 }
-
 
 int carregar_enderecos(const char *caminho, ListaEnderecos *lista)
 {

@@ -1,8 +1,6 @@
 #define _POSIX_C_SOURCE 200809L
-
 #include <stdarg.h>
 #include <stdio.h>
-
 #include "erros.h"
 
 void erro(const char *formato, ...)
