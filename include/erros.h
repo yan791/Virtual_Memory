@@ -2,4 +2,5 @@
 #define VM_ERROS_H
 
 void erro(const char *formato, ...);
+const char *motivo(int codigo);
 #endif

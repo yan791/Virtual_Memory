@@ -10,5 +10,4 @@
 #define MAIOR_FILA NUM_QUADROS
 #define ARQUIVO_SAIDA   "correct.txt"
 #define ARQUIVO_RESERVA "BACKING_STORE.bin"
-
 #endif

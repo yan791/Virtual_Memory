@@ -3,7 +3,6 @@
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <sys/stat.h>
 
 #include "config.h"
@@ -51,7 +50,7 @@ int carregar_enderecos(const char *caminho, ListaEnderecos *lista)
     arquivo = fopen(caminho, "r");
     if (arquivo == NULL) {
         erro("nao foi possivel abrir o arquivo de enderecos '%s': %s",
-             caminho, strerror(errno));
+             caminho, motivo(errno));
         return 0;
     }
     if (fstat(fileno(arquivo), &info) == 0 && S_ISDIR(info.st_mode)) {

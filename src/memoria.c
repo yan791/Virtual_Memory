@@ -1,7 +1,10 @@
 #define _POSIX_C_SOURCE 200809L
+
 #include <errno.h>
 #include <stdio.h>
-#include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+
 #include "config.h"
 #include "erros.h"
 #include "memoria.h"
@@ -10,15 +13,23 @@ static signed char memoria_fisica[NUM_QUADROS * TAM_PAGINA];
 static int tabela_paginas[NUM_PAGINAS];     
 static int pagina_no_quadro[NUM_QUADROS];   
 static FilaReposicao fila_quadros;
-static FILE *reserva = NULL;               
+static FILE *reserva = NULL;                
 
 static FILE *abrir_backing_store(void)
 {
     FILE *arquivo = fopen(ARQUIVO_RESERVA, "rb");
+    struct stat info;
 
     if (arquivo == NULL) {
         erro("nao foi possivel abrir '%s' (ele deve estar no diretorio "
-             "atual): %s", ARQUIVO_RESERVA, strerror(errno));
+             "atual): %s", ARQUIVO_RESERVA, motivo(errno));
+        return NULL;
+    }
+    if (fstat(fileno(arquivo), &info) != 0 || !S_ISREG(info.st_mode)
+        || info.st_size < (off_t)TAM_ESPACO_VIRTUAL) {
+        erro("'%s' invalido: deve ser um arquivo com pelo menos %d bytes",
+             ARQUIVO_RESERVA, TAM_ESPACO_VIRTUAL);
+        fclose(arquivo);
         return NULL;
     }
     return arquivo;

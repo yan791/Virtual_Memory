@@ -1,8 +1,10 @@
 #define _POSIX_C_SOURCE 200809L
+
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "config.h"
 #include "enderecos.h"
 #include "erros.h"
@@ -71,7 +73,7 @@ int main(int argc, char *argv[])
 
     saida = fopen(ARQUIVO_SAIDA, "w");
     if (saida == NULL) {
-        erro("nao foi possivel criar '%s': %s", ARQUIVO_SAIDA, strerror(errno));
+        erro("nao foi possivel criar '%s': %s", ARQUIVO_SAIDA, motivo(errno));
         goto liberar;
     }
 
@@ -86,11 +88,11 @@ int main(int argc, char *argv[])
         int entrada = tlb_buscar(pagina, &quadro);
         int fisico;
 
-        if (entrada >= 0) {                     
+        if (entrada >= 0) {                    
             acertos_tlb++;
         } else {                                
             quadro = memoria_consultar(pagina);
-            if (quadro < 0) {                   
+            if (quadro < 0) {                 
                 int expulsa;
 
                 faltas++;
@@ -123,8 +125,17 @@ int main(int argc, char *argv[])
             (double)acertos_tlb / (double)enderecos.quantidade);
 
     tlb_encerrar();
-    fclose(saida);
-    saida = NULL;
+    {
+        int falhou = ferror(saida);
+
+        falhou |= fclose(saida) != 0;
+        saida = NULL;
+        if (falhou) {
+            erro("falha ao gravar '%s'", ARQUIVO_SAIDA);
+            remove(ARQUIVO_SAIDA);
+            goto liberar;
+        }
+    }
     status = EXIT_SUCCESS;
     goto liberar;
 

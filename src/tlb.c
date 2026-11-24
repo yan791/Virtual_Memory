@@ -16,8 +16,8 @@ static FilaReposicao fila_tlb;
 
 static struct {
     pthread_mutex_t trava;
-    pthread_cond_t  largada;    
-    pthread_cond_t  chegada;    
+    pthread_cond_t  largada;   
+    pthread_cond_t  chegada;   
     unsigned long   rodada;
     int             alvo;       
     int             faltam;     
