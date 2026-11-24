@@ -75,7 +75,8 @@ int main(int argc, char *argv[])
         goto liberar;
     }
 
-    tlb_iniciar(politica_tlb);
+    if (!tlb_iniciar(politica_tlb))
+        goto descartar_saida;
 
     for (i = 0; i < enderecos.quantidade; i++) {
         const unsigned int logico = enderecos.itens[i];
@@ -87,9 +88,9 @@ int main(int argc, char *argv[])
 
         if (entrada >= 0) {                     
             acertos_tlb++;
-        } else {                               
+        } else {                                
             quadro = memoria_consultar(pagina);
-            if (quadro < 0) {                  
+            if (quadro < 0) {                   
                 int expulsa;
 
                 faltas++;
@@ -121,17 +122,20 @@ int main(int argc, char *argv[])
     fprintf(saida, "TLB Hit Rate = %.3f\n",
             (double)acertos_tlb / (double)enderecos.quantidade);
 
+    tlb_encerrar();
     fclose(saida);
     saida = NULL;
     status = EXIT_SUCCESS;
     goto liberar;
 
 descartar_saida:
+    tlb_encerrar();
     fclose(saida);
     saida = NULL;
     remove(ARQUIVO_SAIDA);
 
 liberar:
+    tlb_encerrar();
     memoria_encerrar();
     liberar_enderecos(&enderecos);
     return status;

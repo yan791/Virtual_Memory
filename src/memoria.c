@@ -10,7 +10,7 @@ static signed char memoria_fisica[NUM_QUADROS * TAM_PAGINA];
 static int tabela_paginas[NUM_PAGINAS];     
 static int pagina_no_quadro[NUM_QUADROS];   
 static FilaReposicao fila_quadros;
-static FILE *reserva = NULL;                
+static FILE *reserva = NULL;               
 
 static FILE *abrir_backing_store(void)
 {

@@ -685,4 +685,88 @@ Page Faults = 130
 Page Fault Rate = 0.992
 TLB Hits = 0
 TLB Hit Rate = 0.000
-[?2004h]0;yan@yan-VirtualBox: ~/Área de traba
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7m./vm addresses.txt lru fifo[27m./vm addresses.txt lru fifo
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mtail -n 5 correct.txt[27mtail -n 5 correct.txt
+[?2004lNumber of Translated Addresses = 1000
+Page Faults = 539
+Page Fault Rate = 0.539
+TLB Hits = 54
+TLB Hit Rate = 0.054
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ goit init 
+[?2004lComando 'goit' não encontrado, você quis dizer:
+  comando 'doit' do deb python3-doit (0.31.1-3.4)
+  comando 'gost' do deb gost (0.1.2-2ubuntu0.24.04.3)
+  comando 'git' do deb git (1:2.43.0-1ubuntu7.3)
+  comando 'gout' do deb scotch (7.0.4-1)
+  comando 'got' do deb got (0.95-1)
+Experimente: sudo apt install <deb name>
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mgit add .[27mgit add .
+[?2004l[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [7mgit commit -m "feat: implementa TLB de 16 entradas [27m[7mc[27m[7mom substituição FIFO e LRU"[27m[A]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ git commit -m "feat: implementa TLB de 16 entradas com substituição FIFO e LRU"
+[?2004l[main 06f5314] feat: implementa TLB de 16 entradas com substituição FIFO e LRU
+ 16 files changed, 1230 insertions(+), 162 deletions(-)
+ create mode 100644 include/tlb.h
+ create mode 100644 obj/tlb.o
+ create mode 100644 src/tlb.c
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ git push
+[?2004lEnumerating objects: 38, done.
+Counting objects:   2% (1/38)Counting objects:   5% (2/38)Counting objects:   7% (3/38)Counting objects:  10% (4/38)Counting objects:  13% (5/38)Counting objects:  15% (6/38)Counting objects:  18% (7/38)Counting objects:  21% (8/38)Counting objects:  23% (9/38)Counting objects:  26% (10/38)Counting objects:  28% (11/38)Counting objects:  31% (12/38)Counting objects:  34% (13/38)Counting objects:  36% (14/38)Counting objects:  39% (15/38)Counting objects:  42% (16/38)Counting objects:  44% (17/38)Counting objects:  47% (18/38)Counting objects:  50% (19/38)Counting objects:  52% (20/38)Counting objects:  55% (21/38)Counting objects:  57% (22/38)Counting objects:  60% (23/38)Counting objects:  63% (24/38)Counting objects:  65% (25/38)Counting objects:  68% (26/38)Counting objects:  71% (27/38)Counting objects:  73% (28/38)Counting objects:  76% (29/38)Counting objects:  78% (30/38)Counting objects:  81% (31/38)Counting objects:  84% (32/38)Counting objects:  86% (33/38)Counting objects:  89% (34/38)Counting objects:  92% (35/38)Counting objects:  94% (36/38)Counting objects:  97% (37/38)Counting objects: 100% (38/38)Counting objects: 100% (38/38), done.
+Delta compression using up to 4 threads
+Compressing objects:   4% (1/21)Compressing objects:   9% (2/21)Compressing objects:  14% (3/21)Compressing objects:  19% (4/21)Compressing objects:  23% (5/21)Compressing objects:  28% (6/21)Compressing objects:  33% (7/21)Compressing objects:  38% (8/21)Compressing objects:  42% (9/21)Compressing objects:  47% (10/21)Compressing objects:  52% (11/21)Compressing objects:  57% (12/21)Compressing objects:  61% (13/21)Compressing objects:  66% (14/21)Compressing objects:  71% (15/21)Compressing objects:  76% (16/21)Compressing objects:  80% (17/21)Compressing objects:  85% (18/21)Compressing objects:  90% (19/21)Compressing objects:  95% (20/21)Compressing objects: 100% (21/21)Compressing objects: 100% (21/21), done.
+Writing objects:   4% (1/21)Writing objects:   9% (2/21)Writing objects:  14% (3/21)Writing objects:  19% (4/21)Writing objects:  23% (5/21)Writing objects:  28% (6/21)Writing objects:  33% (7/21)Writing objects:  38% (8/21)Writing objects:  42% (9/21)Writing objects:  47% (10/21)Writing objects:  52% (11/21)Writing objects:  57% (12/21)Writing objects:  61% (13/21)Writing objects:  66% (14/21)Writing objects:  71% (15/21)Writing objects:  76% (16/21)Writing objects:  80% (17/21)Writing objects:  85% (18/21)Writing objects:  90% (19/21)Writing objects:  95% (20/21)Writing objects: 100% (21/21)Writing objects: 100% (21/21), 19.43 KiB | 3.24 MiB/s, done.
+Total 21 (delta 13), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/13)[Kremote: Resolving deltas:   7% (1/13)[Kremote: Resolving deltas:  15% (2/13)[Kremote: Resolving deltas:  23% (3/13)[Kremote: Resolving deltas:  30% (4/13)[Kremote: Resolving deltas:  38% (5/13)[Kremote: Resolving deltas:  46% (6/13)[Kremote: Resolving deltas:  53% (7/13)[Kremote: Resolving deltas:  61% (8/13)[Kremote: Resolving deltas:  69% (9/13)[Kremote: Resolving deltas:  76% (10/13)[Kremote: Resolving deltas:  84% (11/13)[Kremote: Resolving deltas:  92% (12/13)[Kremote: Resolving deltas: 100% (13/13)[Kremote: Resolving deltas: 100% (13/13), completed with 13 local objects.[K
+To https://github.com/yan791/Virtual_Memory.git
+   7d675bf..06f5314  main -> main
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make lc[K[Kclean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clea[K[K[K[K
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/fila_reposicao.c -o obj/fila_reposicao.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/memoria.c -o obj/memoria.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/tlb.c -o obj/tlb.o
+[01m[Ksrc/tlb.c:[m[K In function ‘[01m[Ktlb_buscar[m[K’:
+[01m[Ksrc/tlb.c:142:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvariavel_teste[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  142 |     int [01;35m[Kvariavel_teste[m[K;
+      |         [01;35m[K^~~~~~~~~~~~~~[m[K
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/fila_reposicao.o obj/main.o obj/memoria.o obj/tlb.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ mkae [K[K[K[Kake clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make
+[?2004lmkdir -p obj
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/enderecos.c -o obj/enderecos.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/erros.c -o obj/erros.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/fila_reposicao.c -o obj/fila_reposicao.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/main.c -o obj/main.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/memoria.c -o obj/memoria.o
+cc -std=c99 -O2 -Wall -Wextra -pedantic -Iinclude -c src/tlb.c -o obj/tlb.o
+[01m[Ksrc/tlb.c:[m[K In function ‘[01m[Kiniciar_vigias[m[K’:
+[01m[Ksrc/tlb.c:99:9:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+   99 |     if ([01;35m[Kcodigo[m[K = pthread_mutex_init(&painel.trava, NULL)) {
+      |         [01;35m[K^~~~~~[m[K
+[01m[Ksrc/tlb.c:104:9:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  104 |     if ([01;35m[Kcodigo[m[K = pthread_cond_init(&painel.largada, NULL)) {
+      |         [01;35m[K^~~~~~[m[K
+[01m[Ksrc/tlb.c:110:9:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  110 |     if ([01;35m[Kcodigo[m[K = pthread_cond_init(&painel.chegada, NULL)) {
+      |         [01;35m[K^~~~~~[m[K
+[01m[Ksrc/tlb.c:119:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  119 |     for (i = 0; i [01;35m[K<[m[K sizeof(vigias); i++) {
+      |                   [01;35m[K^[m[K
+[01m[Ksrc/tlb.c:120:13:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  120 |         if ([01;35m[Kcodigo[m[K = pthread_create(&vigias[i], NULL, vigia, &tlb[i])) {
+      |             [01;35m[K^~~~~~[m[K
+[01m[Ksrc/tlb.c:91:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktotal[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   91 |     int [01;35m[Ktotal[m[K = ENTRADAS_TLB;
+      |         [01;35m[K^~~~~[m[K
+[01m[Ksrc/tlb.c:90:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktentativas[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   90 |     int [01;35m[Ktentativas[m[K = 3;
+      |         [01;35m[K^~~~~~~~~~[m[K
+cc -std=c99 -O2 -Wall -Wextra -pedantic -o vm obj/enderecos.o obj/erros.o obj/fila_reposicao.o obj/main.o obj/memoria.o obj/tlb.o
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ make clean
+[?2004lrm -rf vm obj
+[?2004h]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabalho/yrn[01;32myan@yan-VirtualBox[00m:[01;34m~/Área de trabalho/yrn[00m$ [K]0;yan@yan-VirtualBox: ~/Área de trabal

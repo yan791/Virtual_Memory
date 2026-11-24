@@ -9,5 +9,4 @@ typedef struct {
 } ListaEnderecos;
 int carregar_enderecos(const char *caminho, ListaEnderecos *lista);
 void liberar_enderecos(ListaEnderecos *lista);
-
 #endif

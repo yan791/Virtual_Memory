@@ -4,11 +4,10 @@
 
 typedef enum { POLITICA_FIFO, POLITICA_LRU } Politica;
 
-
 typedef struct {
     Politica politica;
     int capacidade;
-    int ocupados;              
+    int ocupados;               
     int cabeca;
     int cauda;
     int anterior[MAIOR_FILA];
